@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="./demo.gif" alt="UniStitch Demo" width="100%">
+  <img src="./demo.gif" alt="Demo" width="100%" height="600">
 </p>
 
 > **[UniStitch: Unifying Semantic and Geometric Features for Image Stitching](https://arxiv.org/abs/2603.10568)**
@@ -17,7 +17,7 @@
 
 ## 📊 Dataset
 
-We use the UDIS dataset to train and evaluate our method. Please refer to **[UDIS](https://github.com/nie-lang/UnsupervisedDeepImageStitching)** for more details about this dataset. Meanwhile, for cross-scenario validation, we used 147 pairs of classical image stitching datasets collected by **[RopStitch](https://github.com/MmelodYy/RopStitch/tree/main)**. You can download from this [link](https://drive.google.com/file/d/1_F7M7DN7K4BjZPEcez7XS6TUpE3iEX8f/view).
+We use the UDIS dataset to train and evaluate our method. Please refer to **[UDIS](https://github.com/nie-lang/UnsupervisedDeepImageStitching)** for more details about this dataset (**Note**: We noticed that the image `000001.jpg` is missing in the `testing/input1` folder of the original UDIS dataset. We have supplemented this missing image, which can be downloaded from this [link](https://drive.google.com/file/d/1M_-lqNdICT4tM3CWLK2WOcPCIzeQdc4d/view?usp=sharing)). Meanwhile, for cross-scenario validation, we used 147 pairs of classical image stitching datasets collected by **[RopStitch](https://github.com/MmelodYy/RopStitch/tree/main)**. You can download from this [link](https://drive.google.com/file/d/1_F7M7DN7K4BjZPEcez7XS6TUpE3iEX8f/view).
 
 ---
 
@@ -31,6 +31,23 @@ We use the UDIS dataset to train and evaluate our method. Please refer to **[UDI
 | tensorboard | >= 2.9.0 |
 
 ---
+
+## 🔧 Data Preparation
+
+### Keypoint Extraction for New Datasets (Optional)
+Before starting training, you need to extract keypoints for the input images. You can use any keypoint extractor of your choice. We provide two versions:
+
+- **LightGLUE-based extractor** (`keypoint_tool/LightGLUE/get_keypoint_from_lightGlue.py`)
+- **OpenCV-based extractor** (`keypoint_tool/get_keypoint_from_opencv.py`)
+
+After extraction, place the generated keypoint files in the corresponding dataset folders.
+
+> **Important**: If you modify the database name or key names during the keypoint extraction process, ensure that:
+> - The saved LMDB database name matches `self.lmdb_path` in `/Codes/datasets.py`
+> - The key names correspond to those used in the `_get_lmdb_data` function
+
+### Quick Start (Pre-extracted Keypoints for UDIS and Classical Datasets)
+To simplify the process, we provide pre-extracted keypoint files (generated with LightGLUE) for both the UDIS and Classical datasets. You can download them from this [link](https://drive.google.com/file/d/1g7jEaQNdNqnVNmqZegAPzfLojSKxtIin/view?usp=sharing).
 
 ## ✈️ Training
 
