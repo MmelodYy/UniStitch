@@ -47,7 +47,15 @@ After extraction, place the generated keypoint files in the corresponding datase
 > - The key names correspond to those used in the `_get_lmdb_data` function
 
 ### Quick Start (Pre-extracted Keypoints for UDIS and Classical Datasets)
-To simplify the process, we provide pre-extracted keypoint files (generated with LightGLUE) for both the UDIS and Classical datasets. You can download them from this [link](https://drive.google.com/file/d/1g7jEaQNdNqnVNmqZegAPzfLojSKxtIin/view?usp=sharing).
+To simplify the process, we provide pre-extracted keypoint files (generated with LightGLUE) for both the UDIS and Classical datasets. You can download them from this [link](https://drive.google.com/file/d/1g7jEaQNdNqnVNmqZegAPzfLojSKxtIin/view?usp=sharing). Then put them in the corresponding dataset folders.
+
+```
+ e.g., 
+/testing/
+├── input1/
+├── input2/
+└── superpoint_lmdb/
+```
 
 ## ✈️ Training
 
