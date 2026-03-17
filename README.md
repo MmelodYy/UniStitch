@@ -47,7 +47,7 @@ After extraction, place the generated keypoint files in the corresponding datase
 > - The key names correspond to those used in the `_get_lmdb_data` function
 
 ### Quick Start (Pre-extracted Keypoints for UDIS and Classical Datasets)
-To simplify the process, we provide pre-extracted keypoint files (generated with LightGLUE) for both the UDIS and Classical datasets. You can download them from this [link](https://drive.google.com/drive/folders/1kUFp0UMmOVkUQ9BRKFnCnOCVJQRtOIxX?usp=sharing). Then put them in the corresponding dataset folders.
+To simplify the process, we provide pre-extracted keypoint files (generated with LightGLUE) for both the UDIS and Classical datasets. You can download them from this [link](https://huggingface.co/datasets/Y5Y/UniStitch_Datasets). Then put them in the corresponding dataset folders.
 
 ```
  e.g., 
@@ -71,7 +71,7 @@ python train_stage1.py
 python train_stage2.py
 ```
 ## 🖼️ Testing 
-Our pretrained models can be available at [Google Drive](https://drive.google.com/file/d/1soyLMV4j5x6dfWEVOUMhpS9U4klPRvMA/view?usp=sharing).
+Our pretrained models can be available at [huggingface](https://huggingface.co/Y5Y/UniStitch_model).
 
 ```
 python test.py
@@ -88,11 +88,11 @@ python test_finetune.py
 If you find UniStitch useful for your research or applications, please cite our paper using the following BibTeX:
 
 ```bibtex
-  @inproceedings{Mei2026UniStitchUS,
+  @article{mei2026unistitch,
   title={UniStitch: Unifying Semantic and Geometric Features for Image Stitching},
-  author={Yuan Mei and Lang Nie and Kang Liao and Yunqiu Xu and Chunyu Lin and Bin Xiao},
-  year={2026},
-  url={https://api.semanticscholar.org/CorpusID:286457517}
+  author={Mei, Yuan and Nie, Lang and Liao, Kang and Xu, Yunqiu and Lin, Chunyu and Xiao, Bin},
+  journal={arXiv preprint arXiv:2603.10568},
+  year={2026}
 }
 ```
 
