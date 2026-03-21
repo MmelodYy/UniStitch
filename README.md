@@ -12,7 +12,7 @@
 
 >
 > [![arXiv](https://img.shields.io/badge/arXiv-2603.10568-b31b1b.svg)](https://arxiv.org/abs/2603.10568)
-> [![Project Page](https://img.shields.io/badge/Project%20Page-GitHub-blue)]()
+> [![Project Page](https://img.shields.io/badge/Project%20Page-GitHub-blue)](https://mmelodyy.github.io/projects/unistitch/)
 > [![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-ffd21e)](https://huggingface.co/Y5Y/UniStitch_model)
 > [![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-ffd21e)](https://huggingface.co/datasets/Y5Y/UniStitch_Dataset)
 
